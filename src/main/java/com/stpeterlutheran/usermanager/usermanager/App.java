@@ -1,4 +1,4 @@
-package $com.stpeterlutheran.usermanager.usermanager;
+package com.stpeterlutheran.usermanager.usermanager;
 
 /**
  * Hello world!
