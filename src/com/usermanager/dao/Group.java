@@ -3,7 +3,12 @@
  */
 package com.usermanager.dao;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.filter.RegexFilter;
+import org.omg.CORBA.portable.ApplicationException;
 
 import com.usermanager.utilities.ShellCommand;
 
@@ -13,88 +18,12 @@ import com.usermanager.utilities.ShellCommand;
  *
  */
 public class Group extends User {
+	
+	private static String groupRegex = "^([a-zA-Z0-9]+)([a-zA-Z0-9\\-]*)\\\\*([a-zA-Z0-9\\-]*)";
+	private static String headerRegex = "([.*\\n]*--+)";
+	private static String footerRegex = "(\\n^The command completed successfully\\n*)";
 
 	public Group(){
 		//;
-	}
-	
-	public void AddLocalGroup( String groupname ) {
-
-		String command = String.format( "net localgroup %s /add", groupname );
-		
-		String output = "";
-		try {
-			output = ShellCommand.execute( command );
-			
-		} catch (Exception e) {
-			LogManager.getLogger().error( String.format( "Unable to add local group %s. %s.\n%s", groupname, e.getMessage(), output ));
-			e.printStackTrace();
-			return;
-		}
-		
-		LogManager.getLogger().error( "Successfully added group " + groupname );
-	}
-
-	public void DeleteLocalGroup( String groupname ) {
-
-		String command = String.format( "net localgroup %s /delete", groupname );
-		
-		String output = "";
-		try {
-			output = ShellCommand.execute( command );
-		} catch (Exception e) {
-			LogManager.getLogger().error( String.format( "Unable to delete group %s. %s\n%s", groupname, e.getMessage(), output ) );
-			e.printStackTrace();
-		}
-
-		LogManager.getLogger().error( "Successfully deleted group " + groupname );
-	}
-
-	public String GetGroupMembers( String groupname ) {
-
-		String command = String.format( "net localgroup %s", groupname );
-
-		String output = "";
-		try {
-			output = ShellCommand.execute( command );
-		} catch (Exception e) {
-			LogManager.getLogger().error( String.format( "Unable to lookup group members for group %s. %s\n%s", groupname, e.getMessage(), output ) );
-			e.printStackTrace();
-		}
-		
-		LogManager.getLogger().info( "Successfully looked up group members for " + groupname );
-		
-		return output;
-	}
-	
-	public void AddUserToLocalGroup( String groupname, String username ) {
-
-		String command = String.format( "net localgroup %s %s /add", groupname, username );
-
-		String output = "";
-		try {
-			output = ShellCommand.execute( command );
-		} catch (Exception e) {
-			LogManager.getLogger().error( String.format( "Unable to add user %s to group %s.", username, groupname ) );
-			//e.printStackTrace();
-			return;
-		}
-		
-		LogManager.getLogger().error( String.format( "Successfully added user %s to group %s.", username, groupname ) );
-	}
-
-	public void RemoveUserFromLocalGroup( String groupname, String username ) {
-
-		String command = String.format( "net localgroup %s %s /delete", groupname, username );
-
-		String output = "";
-		try {
-			output = ShellCommand.execute( command );
-		} catch (Exception e) {
-			LogManager.getLogger( String.format( "Unable to remove user %s from group %s. %s\n%s", username, groupname, e.getMessage(), output ) );
-			e.printStackTrace();
-		}
-		
-		LogManager.getLogger( String.format( "Successfully removed user %s from group %s.", username, groupname ) );
 	}
 }

@@ -3,7 +3,7 @@
  */
 package com.usermanager.controlpanel;
 
-import com.usermanager.dao.Group;
+import com.usermanager.dao.GroupMembers;
 import com.usermanager.utilities.Configuration;
 
 /**
@@ -19,9 +19,17 @@ public class Dashboard {
 		
 		Configuration config = new Configuration();
 		
-		Group group = new Group();
+		GroupMembers groupmembers = GroupMembers.getInstance();
 		
-		group.GetGroupMembers( "MyTestGroup" );
+		try {
+			String result[] = null;
+			groupmembers.ResolveGroupMembers( "Administrators" );
+			
+			System.out.println( groupmembers.getGroupMembers().toString() );
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//group.AddUserToLocalGroup( "MyTestGroup", "jasonbourne" );
 		//group.AddUserToLocalGroup( "MyTestGroup", "jasonbourne" );
 		//group.AddUserToGroup( "MyTestGroup", "johndoe" );

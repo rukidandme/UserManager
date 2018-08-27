@@ -4,16 +4,27 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.logging.log4j.LogManager;
 import org.omg.CORBA.portable.ApplicationException;
 
 public class ShellCommand {
 
 	public static String execute( String command ) throws Exception {
-		Execute2( command );
-		return "Some return result";
+		
+		String commandOutput = null;
+		try {
+			commandOutput = Execute2( command );
+		}
+		catch (Exception e) {
+			LogManager.getLogger().error( String.format( "Exception executing command '%s'. %s", command, e.getMessage() ) );
+			e.printStackTrace();
+			throw new Exception( e );
+		}
+		
+		return commandOutput;
 	}
 
-	public static String execute1(String command) {
+/*	public static String execute1(String command) {
 
 		StringBuffer output = new StringBuffer();
 
@@ -35,7 +46,7 @@ public class ShellCommand {
 
 		return output.toString();
 
-	}
+	}*/
 
 	public static String Execute2( String command ) throws Exception {
 
@@ -45,43 +56,43 @@ public class ShellCommand {
 		try {
 			p = Runtime.getRuntime().exec(command);
 		} catch (final IOException e) {
-			e.printStackTrace();
+			throw new Exception( "IOException, executing command " + command );
 		}
 
 		//Wait to get exit value
 		try {
 			p.waitFor();
 			final int exitValue = p.waitFor();
+			
 			if (exitValue == 0) {
-				System.out.println( String.format( "Executed the command: %s exit value: %s.", command, exitValue ));
+				
 				// Get any console messages.
 				BufferedReader reader =
 						new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 				String line = "";
 				while ((line = reader.readLine())!= null) {
-					output.append(line + "\n");
+					output.append( line + "\n" );
 				}
 			}
 			else {
-				output.append("Failed to execute the following command: " + command + " due to the following error(s):\n");
+				// Read error message sand include in thrown exception.
+				
 				try (final BufferedReader b = new BufferedReader(new InputStreamReader(p.getErrorStream()))) {
 					String line;
-					if ((line = b.readLine()) != null)
-						output.append(line + "\n");
-
+					while ((line = b.readLine())!= null) {
+						output.append( line + "\n" );
+					}
 				} catch (final IOException e) {
-					e.printStackTrace();
+					throw new Exception( "IOException reading command error. " + command  );
 				}
 				throw new Exception( output.toString() );
 			}
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			throw new Exception( "InterruptedException, error waiting on thread. " + command  );
 		}
 		
-		System.out.println( output.toString() );
-		return output.toString();
-				
+		return output.toString();		
 	}
 
 }

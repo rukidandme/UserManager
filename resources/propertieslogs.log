@@ -261,3 +261,400 @@ System error 5 has occurred.
 [ERROR] 2018-02-10 17:32:59.480 [main] com.usermanager.dao.Group - Unable to add user jasonbourne to group MyTestGroup.
 [ERROR] 2018-02-10 17:33:33.563 [main] com.usermanager.dao.Group - Unable to add user jasonbourne to group MyTestGroup.
 [INFO ] 2018-02-10 17:34:23.363 [main] com.usermanager.dao.Group - Successfully looked up group members for MyTestGroup
+[ERROR] 2018-08-24 01:43:37.656 [main] com.usermanager.dao.Group - Unable to lookup group members for group MyTestGroup. Failed to execute the following command: net localgroup MyTestGroup due to the following error(s):
+System error 1376 has occurred.
+
+
+[INFO ] 2018-08-24 01:43:37.689 [main] com.usermanager.dao.Group - Successfully looked up group members for MyTestGroup
+[ERROR] 2018-08-24 01:48:32.603 [main] com.usermanager.dao.Group - Unable to lookup group members for group MyTestGroup. Failed to execute the following command: net localgroup MyTestGroup due to the following error(s):
+System error 1376 has occurred.
+
+
+[INFO ] 2018-08-24 01:48:32.634 [main] com.usermanager.dao.Group - Successfully looked up group members for MyTestGroup
+[INFO ] 2018-08-24 01:49:23.515 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 02:03:14.174 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:05:01.323 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. Failed to execute the following command: net localgroup xxxAdministrators due to the following error(s):
+System error 1376 has occurred.
+
+
+[INFO ] 2018-08-24 02:05:01.380 [main] com.usermanager.dao.Group - Successfully looked up group members for xxxAdministrators
+[ERROR] 2018-08-24 02:16:13.502 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. Failed to execute the following command: net localgroup xxxAdministrators due to the following error(s):
+System error 1376 has occurred.
+
+
+[ERROR] 2018-08-24 02:23:59.422 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. Failed to execute the following command: net localgroup xxxAdministrators due to the following error(s):
+System error 1376 has occurred.
+
+
+[ERROR] 2018-08-24 02:24:46.526 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. Failed to execute the following command: net localgroup xxxAdministrators due to the following error(s):
+System error 1376 has occurred.
+
+
+[ERROR] 2018-08-24 02:44:03.319 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.The specified local group does not exist.
+
+[ERROR] 2018-08-24 02:45:15.806 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 02:46:32.899 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:46:36.305 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 02:50:51.487 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:50:52.148 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 02:52:43.706 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:52:44.512 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 02:55:22.879 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:55:23.592 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 02:55:44.830 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 02:55:45.679 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 04:17:26.853 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 04:41:09.823 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 04:42:02.840 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 04:43:23.122 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 04:48:39.188 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 04:48:49.891 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 04:49:14.615 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 04:50:02.620 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 04:50:43.372 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 04:51:00.598 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 05:14:33.019 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 05:44:27.738 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 05:57:05.281 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 05:57:39.009 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 05:58:43.107 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 06:00:20.423 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 06:03:02.495 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 06:03:05.107 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 06:03:13.648 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 06:04:22.907 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 06:04:26.292 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 06:04:35.751 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 21:22:43.165 [main] com.usermanager.dao.Group - Successfully looked up group members for Administrators
+[ERROR] 2018-08-24 21:23:15.340 [main] com.usermanager.dao.Group - Unable to lookup group members for group xxxAdministrators. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[INFO ] 2018-08-24 22:58:46.647 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 22:59:13.729 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:05:34.960 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:06:45.873 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:07:47.149 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:08:31.208 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:09:41.837 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:12:28.142 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[INFO ] 2018-08-24 23:13:00.343 [main] com.usermanager.dao.GroupMembers - Successfully looked up group members for Administrators
+[ERROR] 2018-08-25 09:29:49.311 [main] com.usermanager.utilities.ShellCommand - Exception executing command net localgroup Administratorsxxx
+System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+[ERROR] 2018-08-25 09:29:49.337 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administratorsxxx. java.lang.Exception: System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[ERROR] 2018-08-25 09:33:02.884 [main] com.usermanager.utilities.ShellCommand - xxxException executing command net localgroup Administratorsxxx
+System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+[ERROR] 2018-08-25 09:33:02.904 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administratorsxxx. java.lang.Exception: System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+
+[ERROR] 2018-08-26 01:01:54.457 [main] com.usermanager.utilities.ShellCommand - Exception executing command 'net localgroup Administratorsxxx'. System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+[ERROR] 2018-08-26 01:01:54.501 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administratorsxxx. java.lang.Exception: System error 1376 has occurred.
+
+The specified local group does not exist.
+
+
+null
+[ERROR] 2018-08-26 01:02:19.669 [main] com.usermanager.utilities.ShellCommand - Exception executing command 'net user a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+'. The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-26 01:02:19.736 [main] com.usermanager.dao.User - Unable to lookup user information for a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+null
+[ERROR] 2018-08-26 01:02:19.737 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administrators. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+The command completed successfully.
+
+
+[ERROR] 2018-08-26 01:04:44.922 [main] com.usermanager.utilities.ShellCommand - Exception executing command 'net user a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+'. The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-26 01:04:49.136 [main] com.usermanager.dao.User - Unable to lookup user information for a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+null
+[ERROR] 2018-08-26 01:04:49.140 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administrators. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+The command completed successfully.
+
+
+[ERROR] 2018-08-26 01:12:16.578 [main] com.usermanager.dao.User - Unable to lookup user information for a-nadams. 1
+User name                    a-nadams
+Full Name                    
+Comment                      Built-in account for administering the computer/domain
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            8/22/2018 8:23:05 AM
+Password expires             Never
+Password changeable          8/22/2018 8:23:05 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   6/20/2018 2:24:59 PM
+
+Logon hours allowed          All
+
+Local Group Memberships      *Administrators       
+Global Group memberships     *None                 
+The command completed successfully.
+
+
+[ERROR] 2018-08-26 01:19:52.904 [main] com.usermanager.dao.User - Unable to lookup user information for a-nadams. 1
+User name                    a-nadams
+Full Name                    
+Comment                      Built-in account for administering the computer/domain
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            8/22/2018 8:23:05 AM
+Password expires             Never
+Password changeable          8/22/2018 8:23:05 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   6/20/2018 2:24:59 PM
+
+Logon hours allowed          All
+
+Local Group Memberships      *Administrators       
+Global Group memberships     *None                 
+The command completed successfully.
+
+
+[ERROR] 2018-08-26 01:19:52.959 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administrators. null
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+The command completed successfully.
+
+
+[INFO ] 2018-08-26 01:24:09.820 [main] com.usermanager.dao.User - Successfully looked up group members for a-nadams
+[INFO ] 2018-08-26 11:37:24.610 [main] com.usermanager.dao.User - Successfully looked up group members for a-nadams
+[ERROR] 2018-08-26 11:37:24.827 [main] com.usermanager.utilities.ShellCommand - Exception executing command 'net user EST1933\DS-DO-RES-PC-LocalAdmin'. The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-26 11:37:24.849 [main] com.usermanager.dao.User - Error accessing account information for user EST1933\DS-DO-RES-PC-LocalAdmin. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-26 11:37:24.855 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administrators. java.lang.Exception: java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+The command completed successfully.
+
+
