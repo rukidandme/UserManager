@@ -48,12 +48,12 @@ public class User {
 	}
 
 	/**
-	 * Initialize and existing User object given the users id (User Name) by
+	 * Initialize and existing User object given the User Name by
 	 * querying the user attributes using the 'net user' command.
 	 * @param userid
 	 * @throws Exception
 	 */
-	public User( String userid ) throws Exception {
+	User( String userid ) throws Exception {
 		
 		/* SHELL COMMANDS */
 		String commandOutput = null;
@@ -61,6 +61,7 @@ public class User {
 			commandOutput = ShellCommand.execute( String.format( "net user %s", userid ) );
 			
 			/*
+			 * Get the account debug.
 			 * Create list object from the user attributes. Use split method to isolate the user account attributes by splitting
 			 * the output on 'new line' character.
 			 */
@@ -78,19 +79,18 @@ public class User {
 			}	
 			
 			// Finally, set the user objects attributes from the map.
-			setUserName( map.get("User Name") );
-			setFullName( map.get("Full Name") );
-			setAccountActive( map.get("Account active") );
-			setLocalGroupMemberships( map.get("Local Group Memberships") );
-			
+			this.userName = map.get("User Name");
+			this.fullName = map.get("Full Name");
+			this.accountActive = map.get("Account active");
+			this.localGroupMemberships = map.get("Local Group Memberships");
 			
 		} catch (Exception e) {
-			LogManager.getLogger().error( String.format( "Error accessing account information for user %s. %s", userid, e.getMessage() ) );
+			LogManager.getLogger().error( String.format( "Error accessing account debugrmation for user %s. %s", userid, e.getMessage() ) );
 			e.printStackTrace();
 			throw new Exception( e );
 		}
 		
-		LogManager.getLogger().info( "Successfully looked up group members for " + userid );
+		LogManager.getLogger().debug( "Successfully looked up group members for " + userid );
 	}
 	
 	/**
@@ -137,16 +137,8 @@ public class User {
 		return accountActive;
 	}
 	
-	public void setAccountActive(String accountActive) {
-		this.accountActive = accountActive;
-	}
-
 	public String getLocalGroupMemberships() {
 		return localGroupMemberships;
-	}
-
-	public void setLocalGroupMemberships(String localGroupMemberships) {
-		this.localGroupMemberships = localGroupMemberships;
 	}
 
 	/**
@@ -155,18 +147,21 @@ public class User {
 	 */
 	public void createNewUser() {
 
-		String output = null;
 		try {
-			output = ShellCommand.execute( String.format( "net user %s /add", getUserName() ) );
-		} catch (Exception e) {
-			LogManager.getLogger().error( "Unable to add user " + getUserName() );
+			/* To set user full name while creating the user account:
+			 * net user username password /ADD /FULLNAME:"User_Fullname"
+			 */
+			String commandOutput = ShellCommand.execute( 
+					String.format( "net user %s %s /add /fullname:'%s'",
+							getUserName(), this.password, getFullName() ) );
+		}
+		catch ( Exception e) {
 			e.printStackTrace();
 		}
 		
-		execute( String.format( "net user %s /delete", getUserName() );
-		updateFullName( getFullName() );
-
-		LogManager.getLogger().error( "Successfully added user " + getUserName() );
+		LogManager.getLogger().debug(
+				String.format( "Successfully added user. Userid:%s password:%s fullname: %s",
+						getUserName(), this.password, getFullName() ) );
 	}
 
 	public void deleteUser( String username ) {
@@ -180,21 +175,22 @@ public class User {
 			e.printStackTrace();
 		}
 
-		LogManager.getLogger().error( "Successfully deleted user " + username );
+		LogManager.getLogger().debug( "Successfully deleted user " + username );
 	}
 
-	public void updatePassword( String username ) {
-
-		String command = String.format( "net user %s /delete", username );
-		String output = null;
+	public void changePassword( String password ) {
+		
+		/* net user USERNAME NEWPASS */
+		String commandOutput = null;
 		try {
-			output = ShellCommand.execute( command );
+			commandOutput = ShellCommand.execute(  String.format( "net user %s %s",
+					getUserName(), password ));
 		} catch (Exception e) {
-			LogManager.getLogger().error( "Unable to set password for user " + username );
+			LogManager.getLogger().error( "Unable to set password for user " + getUserName() );
 			e.printStackTrace();
 		}
 
-		LogManager.getLogger().error( "Successfully set password for user " + username );
+		LogManager.getLogger().debug( "Successfully set password for user " + getUserName() );
 	}
 
 }

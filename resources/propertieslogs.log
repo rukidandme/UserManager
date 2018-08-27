@@ -658,3 +658,48 @@ NETWORK\pvasquez
 The command completed successfully.
 
 
+[DEBUG] 2018-08-27 00:26:55.710 [main] com.usermanager.dao.User - Successfully looked up group members for a-nadams
+[ERROR] 2018-08-27 00:26:55.935 [main] com.usermanager.utilities.ShellCommand - Exception executing command 'net user EST1933\DS-DO-RES-PC-LocalAdmin'. The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-27 00:26:55.945 [main] com.usermanager.dao.User - Error accessing account debugrmation for user EST1933\DS-DO-RES-PC-LocalAdmin. java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+[ERROR] 2018-08-27 00:26:55.947 [main] com.usermanager.dao.GroupMembers - Unable to lookup group members for group Administrators. java.lang.Exception: java.lang.Exception: The syntax of this command is:
+
+NET USER
+[username [password | *] [options]] [/DOMAIN]
+         username {password | *} /ADD [options] [/DOMAIN]
+         username [/DELETE] [/DOMAIN]
+         username [/TIMES:{times | ALL}]
+         username [/ACTIVE: {YES | NO}]
+
+
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+
+Members
+
+-------------------------------------------------------------------------------
+a-nadams
+EST1933\DS-DO-RES-PC-LocalAdmin
+EST1933\DS-RES-C02TD0KZGTDX-1-Administrators
+EST1933\GS-ADM-Domain-Admin
+NETWORK\pvasquez
+The command completed successfully.
+
+
