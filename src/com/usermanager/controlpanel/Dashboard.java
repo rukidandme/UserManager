@@ -3,6 +3,8 @@
  */
 package com.usermanager.controlpanel;
 
+import javax.swing.JFrame;
+
 import com.usermanager.dao.GroupMembers;
 import com.usermanager.utilities.Configuration;
 
@@ -16,6 +18,8 @@ public class Dashboard {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		GUIPanel mypanel = new GUIPanel("User Manager");
 		
 		Configuration config = new Configuration();
 		
